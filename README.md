@@ -1,4 +1,4 @@
-# pustota.nvim
+# pustota-python.nvim
 
 A super-light, minimalist Neovim colorscheme: a literally white background and
 a tiny palette. Tuned for Python (Treesitter + pyright via coc.nvim), but the
@@ -25,7 +25,7 @@ palette, not a 1:1 copy.
 **vim-plug:**
 
 ```vim
-Plug 'drlinggg/pustota.nvim'
+Plug 'drlinggg/pustota-python.nvim'
 
 colorscheme pustota
 ```
@@ -35,14 +35,24 @@ Then run `:PlugInstall`.
 **lazy.nvim:**
 
 ```lua
-{ "drlinggg/pustota.nvim", lazy = false, priority = 1000,
+{ "drlinggg/pustota-python.nvim", lazy = false, priority = 1000,
   config = function() vim.cmd.colorscheme("pustota") end }
 ```
 
 **packer.nvim:**
 
 ```lua
-use "drlinggg/pustota.nvim"
+use "drlinggg/pustota-python.nvim"
 ```
 
-Requires a true-color terminal (`set termguicolors`).
+## Requirements
+
+- A true-color terminal (`set termguicolors`).
+- [nvim-treesitter](https://github.com/nvim-treesitter/nvim-treesitter): the
+  theme highlights through Treesitter capture groups and auto-installs parsers
+  / enables highlighting when it is present. Install it with your plugin
+  manager:
+
+  ```vim
+  Plug 'nvim-treesitter/nvim-treesitter'
+  ```

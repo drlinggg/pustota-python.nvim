@@ -273,6 +273,9 @@ function M.load()
     vim.api.nvim_set_hl(0, group, spec)
   end
 
+  -- Bundle the Treesitter setup so user configs stay clean (no-op without it).
+  require("pustota.treesitter").setup()
+
   -- Terminal palette (best effort within the limited color set).
   vim.g.terminal_color_0  = p.ink
   vim.g.terminal_color_1  = p.red
